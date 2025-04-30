@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="assign02.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script defer src="assign02.js"></script>
+</head>
+
+<body>
+
+  <!-- navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="stocks.html">Stocks</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+
+  <h1>Welcome to the Random Website!</h1>
+
+  <!-- buttons -->
+  <div class="button-container">
+    <button class="button-55" onclick="window.location.href = 'stocks.html'">Stocks</button>
+    <button class="button-55" onclick="window.location.href = 'dogs.html'">Dogs</button>
+  </div>
+
+  <!-- quotes -->
+  <div id="quote-box">
+    <h3>Quote of the Day:</h3>
+    <p id="quote"></p>
+  </div>
+
+  <!-- audio instructions -->
+  <div id="audio-instructions">
+    <h3>Voice Commands:</h3>
+    <ul>
+      <li>Say "Hello" → Alert "Hello World"</li>
+      <li>Say "Change the color to (color)." → Change Background Color to (color)</li>
+      <li>Say "Navigate to (stocks/dogs/home)" → Navigate between pages</li>
+    </ul>
+    <button class="button-55" onclick="startAudio()">Turn On Voice Control</button>
+    <button class="button-55" onclick="stopAudio()">Turn Off Voice Control</button>
+  </div>
+
+</body>
+</html>
