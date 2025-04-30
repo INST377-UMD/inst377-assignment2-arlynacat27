@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>Stocks</title>
+
+  <link rel="stylesheet" href="assign02.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+  <script defer src="assign02.js"></script>
+  <script defer src="stocks.js"></script>
+</head>
+
+
+<body>
+
+  <!-- navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="stocks.html">Stocks</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+
+  <h1>Stocks!!</h1>
+
+  <!-- search stocks -->
+  <div id="stock-search">
+    <input type="text" id="tickerInput" placeholder="Enter Stock Ticker (e.g. AAPL)" required>
+    <select id="dayRange">
+      <option value="30">Last 30 Days</option>
+      <option value="60">Last 60 Days</option>
+      <option value="90">Last 90 Days</option>
+    </select>
+    <button onclick="searchStock()">Search</button>
+  </div>
+
+  <!-- chart container -->
+  <div id="stock-chart">
+    <canvas id="stockChartCanvas"></canvas>
+  </div>
+
+  <!-- top 5 stocks-->
+  <h2>Top 5 Reddit Stocks</h2>
+  <table id="redditStocksTable">
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Comment Count</th>
+        <th>Sentiment</th>
+      </tr>
+    </thead>
+    <tbody id="redditStocksBody"></tbody>
+  </table>
+
+  <!-- audio instructions -->
+  <div id="audio-instructions">
+    <h3>Voice Commands:</h3>
+    <ul>
+      <li>Say "Hello" → Alert "Hello World"</li>
+      <li>Say "Change the color to red/blue/etc." → Change Background Color</li>
+      <li>Say "Navigate to stocks/dogs/home" → Navigate between pages</li>
+      <li>Say "Lookup AAPL" → Search for AAPL stock (30 days)</li>
+    </ul>
+    <button class="button-55" onclick="startAudio()">Turn On Voice Control</button>
+    <button class="button-55" onclick="stopAudio()">Turn Off Voice Control</button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>Dogs</title>
+
+  <link rel="stylesheet" href="assign02.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+  <script defer src="assign02.js"></script>
+  <script defer src="dogs.js"></script>
+</head>
+
+
+<body>
+
+  <!-- navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="stocks.html">Stocks</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+
+  <h1>Dog Gallery and Breeds</h1>
+
+<!-- dog slideshow container (i used https://www.w3schools.com/howto/howto_js_slideshow.asp) -->
+<div class="slideshow-container" id="dog-slideshow"> </div>
+
+<!-- slideshow buttons -->
+<br>
+<a class="prev" onclick="plusSlides(-1)">❮ Prev</a>
+<a class="next" onclick="plusSlides(1)">Next ❯</a>
+
+<br>
+
+  <!-- dog breeds buttons -->
+  <h2>Dog Breeds</h2>
+  <div id="breed-buttons"> </div>
+
+  <!-- dog breed info -->
+  <div id="breed-info" style="display: none;">
+    <h2 id="breedName"></h2>
+    <p id="breedDesc"></p>
+    <p><strong>Min Life Span:</strong> <span id="breedMinLife"></span> years</p>
+    <p><strong>Max Life Span:</strong> <span id="breedMaxLife"></span> years</p>
+  </div>
+
+  <!-- audio instructions -->
+  <div id="audio-instructions">
+    <h3>Voice Commands:</h3>
+    <ul>
+      <li>Say "Hello" → Alert "Hello World"</li>
+      <li>Say "Change the color to red/blue/etc." → Change Background Color</li>
+      <li>Say "Navigate to stocks/dogs/home" → Navigate between pages</li>
+      <li>Say "Load Dog Breed (dog breed)" → Load (dog breed) breed info</li>
+    </ul>
+    <button onclick="startAudio()">Turn On Voice Control</button>
+    <button onclick="stopAudio()">Turn Off Voice Control</button>
+  </div>
+
+</body>
+</html>
